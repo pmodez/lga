@@ -35,11 +35,9 @@ ALLOWED_HOSTS = ['localhost','127.0.0.1',
                  'http://la-grande-aventure.com',
                  'http://www.la-grande-aventure.fr',
                  'http://la-grande-aventure.fr',
-                 'https://grandeaventure-production.up.railway.app',
-                 'https://www.grandeaventure-production.up.railway.app',
-                 'http://grandeaventure-production.up.railway.app',
-                'http://www.grandeaventure-production.up.railway.app',
-                    'grandeaventure-production.up.railway.app'
+                 'http://lga-production.up.railway.app',
+                'http://www.lga-production.up.railway.app',
+                    'lga-production.up.railway.app'
                  ]
 
 CSRF_TRUSTED_ORIGINS = ['https://lagrandeaventure.fr','https://www.lagrandeaventure.fr',
@@ -47,7 +45,8 @@ CSRF_TRUSTED_ORIGINS = ['https://lagrandeaventure.fr','https://www.lagrandeavent
                         'https://la-grande-aventure.com',
                         'https://www.la-grande-aventure.fr',
                         'https://la-grande-aventure.fr',
-                        'https://grandeaventure-production.up.railway.app/'
+                        'https://lga-production.up.railway.app',
+                        'lga-production.up.railway.app'
                         ]
 # Application definition
 
