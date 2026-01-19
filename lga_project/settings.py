@@ -46,7 +46,6 @@ CSRF_TRUSTED_ORIGINS = ['https://lagrandeaventure.fr','https://www.lagrandeavent
                         'https://www.la-grande-aventure.fr',
                         'https://la-grande-aventure.fr',
                         'https://lga-production.up.railway.app',
-                        'lga-production.up.railway.app'
                         ]
 # Application definition
 
