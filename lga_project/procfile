@@ -1,0 +1,2 @@
+web: gunicorn lga_app.wsgi --log-file
+web: python manage.py migrate && gunicorn lga_app.wsg
