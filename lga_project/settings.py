@@ -110,7 +110,7 @@ DATABASES = {
 }
 
 
-CURRENT_FLAG = 0
+CURRENT_FLAG = 1
 
 if CURRENT_FLAG == 0:
     CURRENT_ENV = "dev"
