@@ -38,7 +38,11 @@
                                                     <div class="small text-muted"> <b> {{ article.author}} </b> |  {{ article.date_posted}} | {{ article.category}}  |
                                                         <a class="btn btn-primary" href="#comments">Commenter</a>
                                                         <a class="btn btn-secondary" href="{% url 'article_update' article.id %}">Modifier</a>
+
+                                                        {% if user.is_superuser %}
                                                         <a class="btn btn-danger" href="{% url 'article_delete' article.id %}">Supprimer</a>
+
+                                                        {% endif %}
 
                                                         </div>
                                                     <h2 class="card-title h4">{{ article.title | safe}}</h2>

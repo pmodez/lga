@@ -5,19 +5,14 @@
 
 <!-- About-->
         <section class="page-section bg-secondary" id="about">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
 
-
-                                              <!-- Page content-->
+                    <!-- Page content-->
                         <div class="container">
                             <div class="row">
                                 <!-- Blog entries-->
                                 <div class="col-lg-8">
 
-
                                     <!-- Featured article post-->
-
 
                                      {% for article in articles %}
 
@@ -28,55 +23,25 @@
                                                         {% if article.article_image %}
                                                       <a href="#!"><img class="card-img-top" src="{{ article.article_image.url }}" alt="..." /></a>
                                                         {% endif  %}
-                                                        <br><a class="btn btn-primary" href="{% url 'article_detail' article.id %}">Lire --></a>
+
                                                     </div>
                                                     <div class="col-lg-8">
                                                       <div class="small text-muted">{{ article.date_posted}} | {{ article.category}}  | {{ article.author}} </div>
                                                         <h2 class="card-title h4">{{ article.title  | safe }}</h2>
                                                         <p class="card-text">{{ article.summary | safe }}</p>
 
+                                                    </div>
+                                                     <div class="col-lg-3">
+                                                        <br><a class="btn btn-primary" href="{% url 'article_detail' article.id %}">Lire --></a>
 
                                                     </div>
                                                   </div>
+
                                                 </div>
                                             </div>
 
                                             {% endfor %}
 
-
-
-
-                                    <!-- Nested row for non-featured article posts-->
-
-
-
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <!-- Blog post-->
-
-
-
-                                        </div>
-
-
-
-
-                                    </div>
-
-
-                                    <!-- Pagination-->
-                                    <!--nav aria-label="Pagination">
-                                        <hr class="my-0" />
-                                        <ul class="pagination justify-content-center my-4">
-                                            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
-                                            <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#!">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#!">3</a></li>
-                                            <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
-                                            <li class="page-item"><a class="page-link" href="#!">15</a></li>
-                                            <li class="page-item"><a class="page-link" href="#!">Older</a></li>
-                                        </ul>
-                                    </nav-->
                                 </div>
 
 
@@ -85,15 +50,6 @@
 
                             </div>
                         </div>
-
-
-
-
-
-
-
-                </div>
-            </div>
         </section>
 
 
