@@ -1,3 +1,4 @@
+{% load static %}
 <section class="page-section" id="message">
             <div class="container">
                 <div class="text-center">
@@ -6,26 +7,29 @@
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                        </span>
+
+                            <!--i class="fas fa-circle fa-stack-2x text-primary"></i-->
+                            <!--i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i-->
+                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'pictures/parents_amour.jpg' %}" alt="..." /></div>
+                        <br><br><br>
+
+
                         <h4 class="my-3">Tu es créé par amour</h4>
                         <p class="text-muted">par quelqu’un qui veut le meilleur pour toi, qui t'a tissé dans le sein de ta mère, qui pensait à toi depuis le commencement du monde.</p>
                     </div>
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                        </span>
+
+                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'pictures/jesus_brother.jpg' %}" alt="..." /></div>
+                        <br><br><br>
+
                         <h4 class="my-3">Il est ton frère</h4>
                         <p class="text-muted">Jésus a donné sa vie par amour pour toi. Quel plus grand amour que de donner sa vie pour ses amis ?</p>
                     </div>
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-                        </span>
+
+                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'pictures/calin_pere_fille.jpg' %}" alt="..." /></div>
+                        <br><br><br>
+
                         <h4 class="my-3">Il est ton père aimant</h4>
                         <p class="text-muted">Quelle joie de se savoir fille et fils d'un père qui a créé le monde par amour pour partager cet amour avec ses enfants et avec toi aussi !</p>
                     </div>
