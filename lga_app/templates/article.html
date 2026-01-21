@@ -1,0 +1,140 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <body>
+
+
+    {% include 'navbar.html' %}
+
+
+    {% include 'header.html' %}
+
+    {% block content  %}
+
+    <body id="page-top">
+
+
+        <section class="page-section bg-secondary" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+
+
+                      <!-- ARTICLE-->
+
+                        <div class="container">
+                            <div class="row">
+                                <!-- Blog entries-->
+                                <div class="col-lg-8">
+
+
+                                         <div class="card mb-8">
+                                                {% if article.article_image %}
+
+                                                <a href="#!"><img class="card-img-top" src="{{ article.article_image.url }}" alt="..." /></a>
+                                                {% endif %}
+                                                <div class="card-body">
+                                                    <div class="small text-muted"> <b> {{ article.author}} </b> |  {{ article.date_posted}} | {{ article.category}}  |
+                                                        <a class="btn btn-primary" href="#comments">Commenter</a>
+                                                        <a class="btn btn-secondary" href="{% url 'article_update' article.id %}">Modifier</a>
+                                                        <a class="btn btn-danger" href="{% url 'article_delete' article.id %}">Supprimer</a>
+
+                                                        </div>
+                                                    <h2 class="card-title h4">{{ article.title | safe}}</h2>
+                                                    <p class="card-text">{{ article.summary | safe}}</p>
+                                                    <br>
+                                                    <p class="card-text">{{ article.content | safe}}</p>
+
+                                                </div>
+                                            </div>
+
+                                    <a id="comments" ></a>
+
+                                </div>
+
+
+
+
+
+                                  {% include 'side_widget.html' %}
+
+
+
+                            </div>
+                            </div>
+
+
+                    {% for comment in comments %}
+
+                    <div class="row">
+                                <!-- Blog entries-->
+                                <div class="col-lg-8">
+
+
+                                         <div class="card mb-8">
+
+                                                <div class="card-body">
+
+                                                    <div class="small text-muted"> <b> {{ comment.author}} </b> |  {{ comment.date_posted}} |
+
+                                                        <a class="btn btn-primary" href="#comments">Commenter</a>
+                                                        <a class="btn btn-secondary" href="#comments">Modifier</a>
+                                                        <a class="btn btn-danger" href="{% url 'comment_delete' comment.id %}">Supprimer</a>
+
+                                                        </div>
+                                                    {{ comment.text | safe}}
+
+                                                </div>
+                                            </div>
+
+                                </div>
+
+                            </div>
+
+
+
+
+                    {% endfor  %}
+
+                     <div class="row">
+                            <!-- Blog entries-->
+                            <div class="col-lg-8">
+
+                                     <div class="card mb-8">
+
+                                            <div class="card-body">
+
+                                                <form method="POST">
+
+                                                    {% csrf_token %}
+
+                                                    {{ comment_form.media }}
+                                                    {{ comment_form.as_p }}
+
+                                                    <button class="btn btn-primary type="submit">Poster un commentaire</button>
+                                                </form>
+
+
+                                                </div>
+
+                                    </div>
+
+                           </div>
+
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+        {% include 'footer.html' %}
+
+    {% endblock   %}
+
+    </body>
+
+
+</html>

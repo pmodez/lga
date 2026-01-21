@@ -1,0 +1,56 @@
+{% load static %}
+{% block content  %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'header.html' %}
+
+    <body id="page-top">
+
+        {% include 'navbar.html' %}
+
+        <header class="masthead_2" style="background-image: url({% static 'pictures/frame/main_background_reduced.jpg' %}); background-position: center; margin-bottom: 0;padding-top: 0;padding-bottom: 10%;">
+
+        </header>
+
+        <section class="page-section">
+
+
+            <div class="container px-4 px-lg-5 bg-white">
+                <br>
+                <h2 class="text-center mt-0">Connexion (à Dieu)</h2>
+                <hr class="divider" />
+            </div>
+            <div class="container">
+
+            <form method="POST" action="{% url 'login' %}">
+                {% csrf_token %}
+                  <div class="mb-3">
+                     <input type="text" class="form-control" name="username" placeholder="Utilisateur">
+                  </div>
+
+                  <div class="mb-3">
+                    <input type="text" class="form-control" name="password" placeholder="Mot de passe">
+                        </div>
+
+                  <button type="submit" class="btn btn-primary">Se connecter</button>
+            </form>
+
+                <br/>
+                <br/>
+
+                <a href="{% url 'home' %}" class="btn btn-secondary">Tous les articles</a>
+
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            </div>
+
+        </section>
+
+    {% include 'footer.html' %}
+
+    </body>
+
+</html>
+
+{% endblock %}

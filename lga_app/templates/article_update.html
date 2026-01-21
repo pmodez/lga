@@ -1,0 +1,72 @@
+
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <body>
+
+
+    {% include 'navbar.html' %}
+
+
+    {% include 'header.html' %}
+
+    {% block content  %}
+
+    <body id="page-top">
+
+
+        <section class="page-section bg-secondary" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+
+
+                                              <!-- Page content-->
+                        <div class="container">
+                            <div class="row">
+                                <!-- Blog entries-->
+                                <div class="col-lg-8">
+
+
+
+                                             <form method="POST" action="{% url 'article_update' article.id %}">
+
+                                                    {% csrf_token %}
+
+                                                    {{ form.media }}
+                                                    {{ form.as_p }}
+
+                                                    <br/>
+
+                                                    <button type="submit" class="btn btn-secondary">Mettre à jour</button>
+                                                </form>
+
+
+
+                                </div>
+
+
+                                  {% include 'side_widget.html' %}
+
+
+
+                            </div>
+                      </div>
+                </div>
+            </div>
+        </section>
+
+
+        {% include 'footer.html' %}
+
+    {% endblock   %}
+
+    </body>
+
+
+</html>
+
+

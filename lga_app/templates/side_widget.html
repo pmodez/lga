@@ -1,0 +1,63 @@
+
+{% load static %}
+{% block content  %}
+
+<!-- Side widgets-->
+                <div class="col-lg-4">
+                        <!-- NEW POST-->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="input-group">
+                                 <button class="btn btn-primary" id="button-search" type="button">
+                                     <a class="nav-link" href="{% url 'post_article' %}">Poster un article</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Search widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Search</div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                                <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Categories widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Filtres</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+
+
+                                        <button type="submit" class="btn btn-secondary">Vider les filtres</button> <br><br>
+
+
+                                        <form method="POST" action="{% url 'home_articles' %}">
+
+                                            {% csrf_token %}
+
+
+                                            {% for category in categories %}
+
+                                            <button type="submit" class="btn btn-primary" name="category" value="{{category.id}}">{{category}}</button> <br><br>
+
+                                            {% endfor %}
+
+
+
+                                        </form>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+{% endblock %}
