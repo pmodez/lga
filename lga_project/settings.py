@@ -116,6 +116,7 @@ if CURRENT_FLAG == 0:
     CURRENT_ENV = "dev"
 elif CURRENT_FLAG == 1:
     CURRENT_ENV = "prod"
+    
 if CURRENT_ENV == "dev":
     if True:
         DATABASES = {
