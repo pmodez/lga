@@ -4,15 +4,22 @@
 
 <!-- Side widgets-->
                 <div class="col-lg-4">
+
+                    {% if user.is_authenticated %}
                         <!-- NEW POST-->
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="input-group">
                                  <button class="btn btn-primary" id="button-search" type="button">
+
                                      <a class="nav-link" href="{% url 'post_article' %}">Poster un article</a></button>
+
                             </div>
                         </div>
                     </div>
+
+                    {% endif %}
+
                     <!-- Search widget-->
                     <div class="card mb-4">
                         <div class="card-header">Search</div>

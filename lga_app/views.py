@@ -150,7 +150,7 @@ def comment_update(request, pk):
 def home_articles(request):
     print("HOME")
     filter_segment = { }
-    if request.user.is_authenticated:
+    if True or request.user.is_authenticated:
 
         if request.method == "POST":
             category = request.POST.get('category',False)
@@ -165,8 +165,6 @@ def home_articles(request):
         context = {'articles': articles, 'categories': categories}
         return render(request, 'home_articles.html', context)
 
-    context = {}
-    return render(request, 'home.html', context)
 
 def post_article(request):
 
