@@ -57,7 +57,7 @@ def article_detail(request, pk):
 
     context = {'categories': categories}
 
-    if request.user.is_authenticated:
+    if True or request.user.is_authenticated:
 
         comment_form = CommentForm(request.POST,pk)
 

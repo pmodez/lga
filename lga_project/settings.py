@@ -26,29 +26,41 @@ SECRET_KEY = 'django-insecure-pv-3x)f3yux-3ibvucovpc8etf52k#$pel+!o%3#m%@3iw(u^c
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost','127.0.0.1',
+
                 'la-grande-aventure.com',
-                 'la-grande-aventure.fr',
+                'lagrandeaventure.com',
+                'la-grande-aventure.fr',
                 'lagrandeaventure.fr',
+
                  'https://www.la-grande-aventure.com',
                  'https://la-grande-aventure.com',
+                 'https://www.lagrandeaventure.com',
+                 'https://lagrandeaventure.com',
+
                  'https://www.la-grande-aventure.fr',
                  'https://la-grande-aventure.fr',
                  'https://www.lagrandeaventure.fr',
                  'https://lagrandeaventure.fr',
+
                  'http://www.la-grande-aventure.com',
                  'http://la-grande-aventure.com',
+                 'http://www.lagrandeaventure.com',
+                 'http://lagrandeaventure.com',
+
                  'http://www.la-grande-aventure.fr',
+                 'http://la-grande-aventure.fr',
+                 'http://www.lagrandeaventure.fr',
                  'http://lagrandeaventure.fr',
+
                  'http://lga-production.up.railway.app',
-                'http://www.lga-production.up.railway.app',
-                    'lga-production.up.railway.app'
+                 'http://www.lga-production.up.railway.app',
+                 'lga-production.up.railway.app'
                  ]
 
-CSRF_TRUSTED_ORIGINS = ['https://lagrandeaventure.fr','https://www.lagrandeaventure.fr',
-                        'https://www.la-grande-aventure.com',
-                        'https://la-grande-aventure.com',
-                        'https://www.la-grande-aventure.fr',
+CSRF_TRUSTED_ORIGINS = ['https://lagrandeaventure.fr',
                         'https://la-grande-aventure.fr',
+                        'https://la-grande-aventure.com',
+                        'https://lagrandeaventure.com',
                         'https://lga-production.up.railway.app',
                         ]
 # Application definition
